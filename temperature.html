@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function calculate() {
+  var c = document.getElementById('celsius').value;
+  
+  var r = document.getElementById("result");
+  t = (c*1.8)+32;
+  r.innerHTML = t;
+}
+</script>
+</head>
+
+<body>
+<h1>Temperature Calculator</h1>
+Celsius (C)<br>
+<input type="text" id="celsius"><br>
+
+
+<button id="b1" onclick="calculate()">
+	Calculate
+</button><br>
+
+<div id="result"></div>
+</body>
+</html>
