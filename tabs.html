@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+<script>
+function showTempDiv() {
+  document.getElementById('d1').style.display = 'block';
+  document.getElementById('d2').style.display = 'none';
+  document.getElementById('d3').style.display = 'none';
+}
+function showDistDiv() {
+  document.getElementById('d1').style.display = 'none';
+  document.getElementById('d2').style.display = 'block';
+  document.getElementById('d3').style.display = 'none';
+}
+function showWeightDiv() {
+  document.getElementById('d1').style.display = 'none';
+  document.getElementById('d2').style.display = 'none';
+  document.getElementById('d3').style.display = 'block';
+}
+function calculate() {
+  var c = document.getElementById('celsius').value;
+  
+  var r = document.getElementById("result");
+  t = (c*1.8)+32;
+  r.innerHTML = t;
+}
+</script>
+</head>
+<html>
+<button id="b1" onclick="showTempDiv()">Temp</button>
+
+<button id="b2" onclick="showDistDiv()">Distance</button>
+
+<button id="b3" onclick="showWeightDiv()">Weight</button>
+
+<div id="d1"><h1>Temperature</h1>
+ 	Celsius (C)<br>
+	<input type="text" id="celsius"><br>
+
+
+	<button id="b1" onclick="calculate()">Calculate
+	</button><br>
+	Fahrenheit
+	<div id="result"></div>
+</div>
+
+<div id="d2"><h1>Distance</h1>
+</div>
+<div id="d3"><h1>Weight</h1>
+</div>
+
+<script>  showTempDiv();  </script>
+
+</html>
